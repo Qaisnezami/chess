@@ -4,10 +4,49 @@
   <meta charset="UTF-8">
   <title>CodePen - Cheap AI Chess!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
-
+  <style>
+    .win{
+      height: 25%;
+      font-size: 40px;
+      padding: 0px;
+      margin: 0px;
+    position: absolute;
+    top:40%;
+    background: #b2804d;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    color: white;
+    }
+    .win a{
+      text-decoration: none;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    font-size: 20px;
+    }
+    .display{
+      display: none;
+    }
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div class="win display" id="white">
+  <p> 
+    Black Wins! 
+  </p>
+  <a href="https://qaisnezami.github.io/chess/">New Game</a>
+</div>
+<div class="win display" id="black">
+  <p> 
+    White Wins! 
+  </p>
+  <a href="https://qaisnezami.github.io/chess/">New Game</a>
+</div>
+
 
 <section id="view">
   <aside>

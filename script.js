@@ -803,7 +803,16 @@ class Game {
         const state = this.moveResultState();
         console.log(state);
         if (!state.moves && !state.captures) {
-            alert(state.stalemate ? "Stalemate!" : `${this.turn === "WHITE" ? "Black" : "White"} Wins!`);
+            if(this.turn === "WHITE"){
+                var element = document.getElementById("white");
+                element.classList.remove("display");
+            }else
+            {
+                var element = document.getElementById("black");
+                element.classList.remove("display");
+            }
+            
+            // alert(state.stalemate ? "Stalemate!" : `${this.turn === "WHITE" ? "Black" : "White"} Wins!`);
         }
         return castledId;
     }
